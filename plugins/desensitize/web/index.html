@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 北京京微资易科技有限公司 and AI WorkDeck contributors -->
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>脱敏与复敏</title>
+  <link rel="stylesheet" href="./panel.css" />
+</head>
+<body>
+  <div class="ds-shell">
+    <header class="ds-header">
+      <div>
+        <h1 class="ds-title">本地规则脱敏与复敏</h1>
+        <p class="ds-subtitle">零大模型调用 · 证件号校验位核验 · 密码复敏</p>
+      </div>
+      <div class="ds-tabs">
+        <button type="button" class="ds-tab active" id="tab-mask" data-mode="mask">文档脱敏</button>
+        <button type="button" class="ds-tab" id="tab-restore" data-mode="restore">密码复敏</button>
+      </div>
+    </header>
+
+    <div class="ds-notice" id="notice" hidden></div>
+
+    <section class="ds-card" id="mask-pane">
+      <div class="ds-field">
+        <label class="ds-label" for="source-file">选择待脱敏文件</label>
+        <select id="source-file" class="ds-select"></select>
+      </div>
+
+      <div class="ds-field">
+        <span class="ds-label">识别策略（勾选启用）</span>
+        <div class="ds-strategy-grid" id="strategy-grid">
+          <label class="ds-check"><input type="checkbox" value="COMPANY" checked /> 公司/机构名称</label>
+          <label class="ds-check"><input type="checkbox" value="PERSON_NAME" checked /> 中文姓名（百家姓上下文）</label>
+          <label class="ds-check"><input type="checkbox" value="CREDIT_CODE" checked /> 统一社会信用代码</label>
+          <label class="ds-check"><input type="checkbox" value="ID_CARD" checked /> 身份证号（含校验位）</label>
+          <label class="ds-check"><input type="checkbox" value="LAWYER_LICENSE" checked /> 律师执业证号</label>
+          <label class="ds-check"><input type="checkbox" value="PHONE" checked /> 手机号码</label>
+          <label class="ds-check"><input type="checkbox" value="BANK_CARD" checked /> 银行账号</label>
+          <label class="ds-check"><input type="checkbox" value="ADDRESS" /> 详细地址</label>
+        </div>
+      </div>
+
+      <div class="ds-field">
+        <label class="ds-label" for="custom-words">补充特定敏感词（可选，逗号或换行分隔）</label>
+        <textarea id="custom-words" class="ds-textarea" rows="2" placeholder="例如：华星半导体、张某甲、特许经营协议编号…"></textarea>
+      </div>
+
+      <div class="ds-field">
+        <label class="ds-label" for="mask-password">映射表加密口令（用于后续复敏还原）</label>
+        <input id="mask-password" class="ds-input" type="password" placeholder="输入加密口令（留空则仅生成单向脱敏件）" />
+      </div>
+
+      <div class="ds-actions">
+        <button type="button" class="ds-btn" id="preview-btn">扫描并预览命中项</button>
+        <button type="button" class="ds-btn ds-btn-primary" id="execute-btn">生成脱敏副本</button>
+      </div>
+    </section>
+
+    <section class="ds-card" id="restore-pane" hidden>
+      <div class="ds-field">
+        <label class="ds-label" for="masked-file">选择已脱敏文书副本</label>
+        <select id="masked-file" class="ds-select"></select>
+      </div>
+      <div class="ds-field">
+        <label class="ds-label" for="restore-password">输入脱敏时设置的口令</label>
+        <input id="restore-password" class="ds-input" type="password" placeholder="输入加密口令以解密映射表" />
+      </div>
+      <div class="ds-actions">
+        <button type="button" class="ds-btn ds-btn-primary" id="restore-btn">解密并生成复敏文书</button>
+      </div>
+    </section>
+
+    <section class="ds-card" id="result-card" hidden>
+      <div class="ds-section-header">
+        <span class="ds-label" id="result-title">识别与替换明细</span>
+        <button type="button" class="ds-btn ds-btn-sm" id="open-output-btn" hidden>打开生成文件</button>
+      </div>
+      <div id="checksum-warning" class="ds-warning" hidden></div>
+      <div id="entity-list" class="ds-entity-list"></div>
+    </section>
+  </div>
+  <script src="./awd-plugin-sdk.js"></script>
+  <script src="./panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 北京京微资易科技有限公司 and AI WorkDeck contributors -->
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>语音转文字与朗读</title>
+  <link rel="stylesheet" href="./panel.css" />
+</head>
+<body>
+  <div class="vs-shell">
+    <header class="vs-header">
+      <div>
+        <h1 class="vs-title">语音转文字与朗读</h1>
+        <p class="vs-subtitle">ASR 录音转写 · 说话人分离 · TTS 文书校对朗读</p>
+      </div>
+      <div class="vs-tabs">
+        <button type="button" class="vs-tab active" id="tab-asr">语音转文字</button>
+        <button type="button" class="vs-tab" id="tab-tts">文字转语音</button>
+      </div>
+    </header>
+
+    <div class="vs-notice" id="notice" hidden></div>
+
+    <section class="vs-card" id="asr-pane">
+      <div class="vs-field">
+        <label class="vs-label" for="audio-file">选择项目音视频文件</label>
+        <select id="audio-file" class="vs-select"></select>
+      </div>
+      <div class="vs-row">
+        <label class="vs-check"><input type="checkbox" id="diarization-cb" checked /> 启用说话人分离</label>
+        <label class="vs-check"><input type="checkbox" id="legal-boost-cb" checked /> 法律热词增强</label>
+      </div>
+      <div class="vs-actions">
+        <button type="button" class="vs-btn vs-btn-primary" id="transcribe-btn">开始转写</button>
+        <button type="button" class="vs-btn" id="insert-transcript-btn">插入当前文书</button>
+        <button type="button" class="vs-btn" id="ai-minutes-btn">AI 提炼庭审/会谈纪要</button>
+      </div>
+      <pre class="vs-transcript" id="transcript-box">选择录音文件后点击「开始转写」…</pre>
+    </section>
+
+    <section class="vs-card" id="tts-pane" hidden>
+      <div class="vs-row">
+        <div class="vs-field" style="flex:1">
+          <label class="vs-label" for="tts-voice">朗读音色</label>
+          <select id="tts-voice" class="vs-select">
+            <option value="zh-CN-XiaoxiaoNeural">律政女声（晓晓 · 清晰稳重）</option>
+            <option value="zh-CN-YunxiNeural">沉稳男声（云希 · 庭审播报）</option>
+            <option value="en-US-JennyNeural">English Legal Voice (Jenny)</option>
+          </select>
+        </div>
+        <div class="vs-field" style="width:110px">
+          <label class="vs-label" for="tts-rate">语速</label>
+          <select id="tts-rate" class="vs-select">
+            <option value="1.0">1.0x 标准</option>
+            <option value="1.25">1.25x 高效</option>
+            <option value="1.5">1.5x 速听</option>
+          </select>
+        </div>
+      </div>
+      <div class="vs-field">
+        <div class="vs-row-between">
+          <label class="vs-label" for="tts-text">待朗读文书段落</label>
+          <button type="button" class="vs-btn vs-btn-sm" id="pull-selection-btn">读取当前文书选区</button>
+        </div>
+        <textarea id="tts-text" class="vs-textarea" rows="4" placeholder="输入或从当前打开的文书中读取需要语音校对的段落…"></textarea>
+      </div>
+      <div class="vs-actions">
+        <button type="button" class="vs-btn vs-btn-primary" id="synthesize-btn">合成并朗读</button>
+      </div>
+      <div class="vs-meta" id="tts-status"></div>
+    </section>
+  </div>
+  <script src="./awd-plugin-sdk.js"></script>
+  <script src="./panel.js"></script>
+</body>
+</html>

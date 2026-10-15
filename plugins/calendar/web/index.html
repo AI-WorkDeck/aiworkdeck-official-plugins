@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 北京京微资易科技有限公司 and AI WorkDeck contributors -->
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>日历与审限</title>
+  <link rel="stylesheet" href="./panel.css" />
+</head>
+<body>
+  <div class="cal-shell">
+    <header class="cal-header">
+      <div>
+        <h1 class="cal-title">办案日历与审限管理</h1>
+        <p class="cal-subtitle">开庭排期 · 上诉/举证期推算 · 保全续封预警</p>
+      </div>
+      <button type="button" class="cal-btn cal-btn-sm" id="extract-ai-btn">AI 扫描卷宗提取日程</button>
+    </header>
+
+    <div class="cal-notice" id="notice" hidden></div>
+
+    <section class="cal-card">
+      <div class="cal-section-title">新增日程 / 审限节点</div>
+      <div class="cal-row">
+        <select id="event-type" class="cal-select" style="width:120px">
+          <option value="COURT">开庭排期</option>
+          <option value="DEADLINE">审限/上诉届满</option>
+          <option value="PRESERVATION">保全续封预警</option>
+          <option value="MEETING">客户会谈</option>
+        </select>
+        <input id="event-date" class="cal-input" type="date" value="2026-10-20" />
+      </div>
+      <div class="cal-row">
+        <input id="event-title" class="cal-input" type="text" placeholder="例如：海淀法院第12法庭一审开庭 / 判决书上诉期届满…" />
+        <button type="button" class="cal-btn cal-btn-primary" id="add-event-btn">添加</button>
+      </div>
+    </section>
+
+    <section class="cal-card">
+      <div class="cal-section-title">法定期间与上诉期推算器（《民诉法》第85条次日起算）</div>
+      <div class="cal-row">
+        <label class="cal-meta">送达/起算日</label>
+        <input id="calc-start" class="cal-input" type="date" value="2026-10-15" />
+        <select id="calc-rule" class="cal-select">
+          <option value="15">民事判决上诉期（15日）</option>
+          <option value="10">民事裁定上诉期（10日）</option>
+          <option value="30">举证期限 / 保全续封提前预警（30日）</option>
+        </select>
+        <button type="button" class="cal-btn" id="calc-btn">推算届满日</button>
+      </div>
+      <div class="cal-calc-result" id="calc-result" hidden></div>
+    </section>
+
+    <section class="cal-card">
+      <div class="cal-section-title">当前案件日程清单</div>
+      <div class="cal-list" id="event-list"></div>
+    </section>
+  </div>
+  <script src="./awd-plugin-sdk.js"></script>
+  <script src="./panel.js"></script>
+</body>
+</html>

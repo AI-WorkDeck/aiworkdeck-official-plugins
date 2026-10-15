@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2026 北京京微资易科技有限公司 and AI WorkDeck contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+id: voice-suite
+name: 语音转文字与朗读
+name_en: Voice Suite (ASR & TTS)
+description: 庭审与客户会谈录音转写（说话人分离）、文书校对朗读（TTS）及带时间戳的法律笔录整理。
+author: AI WorkDeck
+author_url: https://www.aiworkdeck.com
+version: 1.0.0
+license: AGPL-3.0-or-later
+enabled_by_default: false
+category: 争议解决
+languages:
+  - zh-CN
+  - en-US
+triggers:
+  - 语音转文字
+  - 文字转语音
+  - 录音转写
+  - 庭审录音
+  - 谈话笔录整理
+triggers_en:
+  - speech to text
+  - text to speech
+  - transcribe recording
+  - hearing transcript
+prompt: prompt.md

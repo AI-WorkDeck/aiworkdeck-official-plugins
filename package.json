@@ -1,0 +1,21 @@
+{
+  "name": "@aiworkdeck/official-plugins",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Official plugins monorepo for AI WorkDeck (Microkernel Sandbox Web + Java SPI + Legal Skills)",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AI-WorkDeck/aiworkdeck-official-plugins.git"
+  },
+  "scripts": {
+    "check:spdx": "node scripts/check-spdx.mjs",
+    "test": "node --test plugins/*/tests/*.mjs",
+    "build": "bash scripts/build-all.sh",
+    "verify": "npm run check:spdx && bash scripts/build-all.sh"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0",
+    "puppeteer-core": "^23.10.0"
+  }
+}

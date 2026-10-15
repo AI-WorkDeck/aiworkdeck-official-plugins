@@ -1,0 +1,25 @@
+{
+  "id": "voice-suite",
+  "name": "语音转文字与朗读",
+  "version": "1.0.0",
+  "description": "法律语音生产力套件：合并庭审/会谈录音转写（ASR 说话人分离 + 法言法语热词增强）、文书语音播报（TTS 多角色倍速朗读）与一键提炼带时间戳的谈话笔录。",
+  "author": "AI WorkDeck",
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://github.com/AI-WorkDeck/aiworkdeck-official-plugins/tree/master/plugins/voice-suite",
+  "category": "效率工具",
+  "icon": {
+    "svg": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='2' width='6' height='11' rx='3'/><path d='M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8'/></svg>"
+  },
+  "entry": {
+    "panel": "web/index.html",
+    "title": "语音转文字与朗读",
+    "width": 420
+  },
+  "skill": "skill",
+  "permissions": [
+    "file_read",
+    "chat",
+    "storage",
+    "editor"
+  ]
+}

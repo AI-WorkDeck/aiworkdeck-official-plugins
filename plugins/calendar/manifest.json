@@ -1,0 +1,24 @@
+{
+  "id": "calendar",
+  "name": "日历与审限",
+  "version": "1.0.0",
+  "description": "律师办案日历与法定期间推算器：管理开庭排期、举证期限、上诉期限（15日/10日）、财产保全续封预警与法定节假日顺延计算，支持从裁判文书/传票一键提取日程。",
+  "author": "AI WorkDeck",
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://github.com/AI-WorkDeck/aiworkdeck-official-plugins/tree/master/plugins/calendar",
+  "category": "效率工具",
+  "icon": {
+    "svg": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='4' width='18' height='18' rx='2'/><path d='M16 2v4M8 2v4M3 10h18'/></svg>"
+  },
+  "entry": {
+    "panel": "web/index.html",
+    "title": "日历与审限",
+    "width": 420
+  },
+  "skill": "skill",
+  "permissions": [
+    "file_read",
+    "chat",
+    "storage"
+  ]
+}

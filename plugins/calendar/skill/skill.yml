@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2026 北京京微资易科技有限公司 and AI WorkDeck contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+id: calendar
+name: 日历与审限
+name_en: Legal Calendar & Deadlines
+description: 开庭排期、上诉期/举证期/保全续封期间推算与卷宗传票日期自动提取。
+author: AI WorkDeck
+author_url: https://www.aiworkdeck.com
+version: 1.0.0
+license: AGPL-3.0-or-later
+enabled_by_default: false
+category: 争议解决
+languages:
+  - zh-CN
+  - en-US
+triggers:
+  - 开庭日历
+  - 审限推算
+  - 上诉期计算
+  - 保全到期
+  - 提取开庭时间
+triggers_en:
+  - court calendar
+  - statutory deadline
+  - appeal deadline
+prompt: prompt.md

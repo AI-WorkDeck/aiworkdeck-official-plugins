@@ -1,0 +1,26 @@
+{
+  "id": "litigation-visual",
+  "name": "诉讼可视化",
+  "version": "1.1.0",
+  "description": "从判决书、合同、证据卷宗自动抽取法律事实语义地图，确定性渲染案件时间轴、法律关系图、股权控制图、诉讼流程图与甘特图（输出可编辑 .drawio + .svg + .png）。",
+  "author": "AI WorkDeck",
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://github.com/AI-WorkDeck/aiworkdeck-official-plugins/tree/master/plugins/litigation-visual",
+  "category": "争议解决",
+  "requiresPack": "litigation-visual",
+  "icon": {
+    "svg": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='5' cy='6' r='2.2'/><circle cx='19' cy='6' r='2.2'/><circle cx='12' cy='18' r='2.4'/><path d='M7.2 6h9.6M6.4 7.8l4.2 8.2M17.6 7.8l-4.2 8.2'/></svg>"
+  },
+  "entry": {
+    "panel": "web/index.html",
+    "title": "诉讼可视化",
+    "width": 440
+  },
+  "skill": "skill",
+  "permissions": [
+    "file_read",
+    "chat",
+    "storage",
+    "editor"
+  ]
+}

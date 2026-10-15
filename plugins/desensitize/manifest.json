@@ -1,0 +1,24 @@
+{
+  "id": "desensitize",
+  "name": "脱敏",
+  "version": "2.3.0",
+  "description": "本地确定性规则脱敏与密码复敏：自动识别公司名称、中文姓名（百家姓上下文）、统一社会信用代码、身份证号、银行卡、手机号、律师执业证号，支持自定义敏感词与加密映射表复敏。",
+  "author": "AI WorkDeck",
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://github.com/AI-WorkDeck/aiworkdeck-official-plugins/tree/master/plugins/desensitize",
+  "category": "合规监管",
+  "icon": {
+    "svg": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3l7 3v6c0 4.5-3 8.3-7 9.5C8 20.3 5 16.5 5 12V6l7-3z'/><path d='M9 12l2 2 4-4'/></svg>"
+  },
+  "entry": {
+    "panel": "web/index.html",
+    "title": "脱敏与复敏",
+    "width": 420
+  },
+  "skill": "skill",
+  "permissions": [
+    "file_read",
+    "storage",
+    "editor"
+  ]
+}

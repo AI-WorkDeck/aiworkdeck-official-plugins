@@ -1,0 +1,9 @@
+node_modules/
+dist/
+plugins/*/dist/
+plugins/*/backend/target/
+plugins/*/web/awd-plugin-sdk.js
+!plugins/tencent-meeting/web/awd-plugin-sdk.js
+!plugins/baoqingtian/web/awd-plugin-sdk.js
+sdk/plugin-api/target/
+.DS_Store

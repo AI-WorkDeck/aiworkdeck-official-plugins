@@ -1,0 +1,74 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 北京京微资易科技有限公司 and AI WorkDeck contributors -->
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>诉讼可视化</title>
+  <link rel="stylesheet" href="./panel.css" />
+</head>
+<body>
+  <div class="lv-shell">
+    <header class="lv-header">
+      <div>
+        <h1 class="lv-title">诉讼可视化工作台</h1>
+        <p class="lv-subtitle" id="project-banner">正在连接项目上下文…</p>
+      </div>
+      <button type="button" class="lv-btn lv-btn-ghost" id="refresh-btn">刷新材料</button>
+    </header>
+
+    <div class="lv-notice" id="notice" hidden></div>
+
+    <section class="lv-card">
+      <div class="lv-section-title">1. 选择图表布局与视觉标准</div>
+      <div class="lv-grid" id="layout-grid">
+        <button type="button" class="lv-chip active" data-layout="timeline">案件时间轴</button>
+        <button type="button" class="lv-chip" data-layout="relations">法律关系图</button>
+        <button type="button" class="lv-chip" data-layout="equity">股权控制图</button>
+        <button type="button" class="lv-chip" data-layout="flowchart">程序流程图</button>
+        <button type="button" class="lv-chip" data-layout="limitation">时效期间图</button>
+        <button type="button" class="lv-chip" data-layout="gantt">履行对比甘特图</button>
+      </div>
+      <div class="lv-field-row">
+        <label class="lv-label" for="visual-mode">视觉风格</label>
+        <select id="visual-mode" class="lv-select">
+          <option value="courtroom">法庭汇报标准版（白底高对比 + 争议深红锚点）</option>
+          <option value="minimal">卷宗打印极简版（黑白灰线条）</option>
+          <option value="presentation">客户汇报演示版（深海蓝商务风）</option>
+        </select>
+      </div>
+      <div class="lv-field-row">
+        <label class="lv-label" for="focus-input">核心争议焦点 / 深红强调项（选填）</label>
+        <input id="focus-input" class="lv-input" type="text" placeholder="例如：2025-06-18 保证期间届满节点、隐名代持穿透路径…" />
+      </div>
+    </section>
+
+    <section class="lv-card">
+      <div class="lv-section-header">
+        <span class="lv-section-title">2. 勾选抽取材料来源</span>
+        <span class="lv-meta" id="file-count">0 份文件</span>
+      </div>
+      <div class="lv-file-list" id="file-list"></div>
+    </section>
+
+    <section class="lv-actions">
+      <button type="button" class="lv-btn lv-btn-primary" id="generate-ai-btn">AI 抽取语义地图并出图</button>
+      <button type="button" class="lv-btn" id="quick-preview-btn">生成结构化草图预览</button>
+    </section>
+
+    <section class="lv-card" id="preview-card" hidden>
+      <div class="lv-section-header">
+        <span class="lv-section-title" id="preview-title">语义地图预览</span>
+        <div class="lv-inline-actions">
+          <button type="button" class="lv-btn lv-btn-sm" id="open-drawio-btn">打开 .drawio</button>
+          <button type="button" class="lv-btn lv-btn-sm" id="insert-doc-btn">插入当前文书</button>
+        </div>
+      </div>
+      <pre class="lv-preview-box" id="preview-box"></pre>
+    </section>
+  </div>
+  <script src="./awd-plugin-sdk.js"></script>
+  <script src="./panel.js"></script>
+</body>
+</html>

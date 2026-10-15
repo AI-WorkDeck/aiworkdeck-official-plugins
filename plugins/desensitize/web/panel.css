@@ -1,0 +1,117 @@
+/* SPDX-FileCopyrightText: 2026 北京京微资易科技有限公司 and AI WorkDeck contributors */
+/* SPDX-License-Identifier: AGPL-3.0-or-later */
+:root {
+  --ds-bg: var(--awd-surface, #f8fafc);
+  --ds-card: var(--awd-surface-elevated, #ffffff);
+  --ds-text: var(--awd-text, #0f172a);
+  --ds-muted: var(--awd-text-secondary, #475569);
+  --ds-border: var(--awd-border, #e2e8f0);
+  --ds-accent: var(--awd-accent, #0f766e);
+  --ds-accent-soft: var(--awd-accent-subtle, rgba(15, 118, 110, 0.1));
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--ds-bg);
+  color: var(--ds-text);
+  font-size: 13px;
+}
+
+.ds-shell { display: flex; flex-direction: column; gap: 10px; }
+.ds-header { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ds-title { margin: 0; font-size: 15px; font-weight: 600; }
+.ds-subtitle { margin: 2px 0 0; font-size: 11px; color: var(--ds-muted); }
+
+.ds-tabs { display: flex; gap: 4px; }
+.ds-tab {
+  padding: 5px 10px;
+  border: 1px solid var(--ds-border);
+  border-radius: 6px;
+  background: var(--ds-card);
+  color: var(--ds-text);
+  font-size: 12px;
+  cursor: pointer;
+}
+.ds-tab.active {
+  background: var(--ds-accent);
+  border-color: var(--ds-accent);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.ds-notice {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--ds-border);
+  background: var(--ds-accent-soft);
+  font-size: 12px;
+}
+
+.ds-card {
+  background: var(--ds-card);
+  border: 1px solid var(--ds-border);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ds-field { display: flex; flex-direction: column; gap: 4px; }
+.ds-label { font-size: 12px; font-weight: 600; }
+.ds-input, .ds-select, .ds-textarea {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid var(--ds-border);
+  border-radius: 6px;
+  background: var(--ds-bg);
+  color: var(--ds-text);
+  font-size: 12px;
+}
+
+.ds-strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.ds-check { display: flex; align-items: center; gap: 5px; font-size: 12px; }
+
+.ds-actions { display: flex; gap: 8px; }
+.ds-btn {
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--ds-border);
+  background: var(--ds-card);
+  color: var(--ds-text);
+  font-size: 12px;
+  cursor: pointer;
+}
+.ds-btn-primary {
+  flex: 1;
+  background: var(--ds-accent);
+  border-color: var(--ds-accent);
+  color: #ffffff;
+  font-weight: 600;
+}
+.ds-btn-sm { padding: 4px 8px; font-size: 11px; }
+
+.ds-section-header { display: flex; justify-content: space-between; align-items: center; }
+.ds-warning {
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: rgba(217, 119, 6, 0.12);
+  color: #b45309;
+  font-size: 11px;
+}
+.ds-entity-list { display: flex; flex-direction: column; gap: 4px; max-height: 160px; overflow-y: auto; }
+.ds-entity-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: var(--ds-bg);
+  font-size: 12px;
+}
