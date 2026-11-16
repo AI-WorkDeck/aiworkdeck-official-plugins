@@ -95,4 +95,6 @@ npm run verify
 
 ## 4. 开源协议
 
+本仓库自有代码权利主体为北京公富信息技术有限公司（BEIJING GONG FU INFORMATION TECHNOLOGY LIMITED）；社区贡献者及第三方的权利声明保持不变。
+
 本仓库全部源码采用 **[GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later)](./LICENSE)** 授权，所有一方法律科技插件源码文件均遵循强制 SPDX 头规范并通过 CI 自动门禁检查。

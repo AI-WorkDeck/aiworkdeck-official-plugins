@@ -1,4 +1,4 @@
-/* SPDX-FileCopyrightText: 2026 北京京微资易科技有限公司 and AI WorkDeck contributors */
+/* SPDX-FileCopyrightText: 2026 北京公富信息技术有限公司 and AI WorkDeck contributors */
 /* SPDX-License-Identifier: AGPL-3.0-or-later */
 /* Brand tokens adapted from the user-provided Baoqingtian design system. No external font requests. */
 :root{color-scheme:light;--bqt-teal:#1BC1CD;--bqt-teal-deep:#00828C;--bqt-teal-darker:#002326;--bqt-sky:#F5F9FF;--bqt-mint:#D9F0F2;--bqt-navy:#132040;--bqt-font:"Alibaba PuHuiTi","MiSans","PingFang SC",system-ui,sans-serif;--bqt-display:"MiSans","Alibaba PuHuiTi",system-ui,sans-serif;--surface:#fff;--bg:var(--bqt-sky);--text:var(--bqt-navy);--muted:#59677d;--border:#dce6ed;--accent:var(--bqt-teal-deep);--tint:#e7f7f8;--danger:#b33520;--price:#b9431c;--radius:12px;--small-radius:8px;--space:16px;--control:40px;--shadow:0 6px 16px rgba(19,32,64,.08);--sky:linear-gradient(180deg,#D9F0F2 0%,#F5F9FF 100%)}
