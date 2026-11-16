@@ -80,14 +80,14 @@ npm run verify
 ```
 
 构建完成后，所有产物输出在 `dist/` 目录：
-- `dist/tencent-meeting-0.1.0.zip`
-- `dist/project-im-0.1.0.zip`
-- `dist/baoqingtian-0.1.0.zip`
-- `dist/lawfirm-management-0.1.0.zip`
-- `dist/litigation-visual-1.1.0.zip`
-- `dist/desensitize-2.3.0.zip`
-- `dist/voice-suite-1.0.0.zip`
-- `dist/calendar-1.0.0.zip`
+- `dist/tencent-meeting-1.0.1.zip`
+- `dist/project-im-0.1.1.zip`
+- `dist/baoqingtian-1.0.1.zip`
+- `dist/lawfirm-management-0.1.1.zip`
+- `dist/litigation-visual-1.1.1.zip`
+- `dist/desensitize-2.3.1.zip`
+- `dist/voice-suite-1.0.1.zip`
+- `dist/calendar-1.0.1.zip`
 - `dist/catalog.json`（含 SHA-256 校验和、权限清单与元数据，供插件广场与构建流水线拉取）
 - `dist/SHA256SUMS`
 

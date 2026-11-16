@@ -1,7 +1,7 @@
 {
   "id": "voice-suite",
   "name": "语音转文字与朗读",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "法律语音生产力套件：合并庭审/会谈录音转写（ASR 说话人分离 + 法言法语热词增强）、文书语音播报（TTS 多角色倍速朗读）与一键提炼带时间戳的谈话笔录。",
   "author": "AI WorkDeck",
   "license": "AGPL-3.0-or-later",

@@ -1,6 +1,6 @@
 {
   "name": "@aiworkdeck/official-plugins",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Official plugins monorepo for AI WorkDeck (Microkernel Sandbox Web + Java SPI + Legal Skills)",
   "license": "AGPL-3.0-or-later",
