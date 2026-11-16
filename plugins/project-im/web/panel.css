@@ -1,4 +1,4 @@
-/* SPDX-FileCopyrightText: 2026 北京京微资易科技有限公司 and AI WorkDeck contributors */
+/* SPDX-FileCopyrightText: 2026 北京公富信息技术有限公司 and AI WorkDeck contributors */
 /* SPDX-License-Identifier: AGPL-3.0-or-later */
 :root{color-scheme:light;--fallback-bg:#f4f5f2;--fallback-surface:#fff;--fallback-text:#292d2c;--fallback-muted:#667067;--fallback-border:#dce1d9;--fallback-wash:#e7f0e6;--fallback-accent:#426d50;--fallback-danger:#a33434;--fallback-on-accent:#fff;font:var(--awd-font-size-body,13px)/1.5 var(--awd-font-sans,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif);color:var(--awd-text,var(--fallback-text));background:var(--awd-surface,var(--fallback-surface))}
 :root[data-theme="dark"]{color-scheme:dark;--fallback-bg:#1d211e;--fallback-surface:#242a25;--fallback-text:#e3e8e1;--fallback-muted:#b6c1b5;--fallback-border:#454d45;--fallback-wash:#334838;--fallback-accent:#9cbe9d;--fallback-danger:#ffb0a7;--fallback-on-accent:#172719}
