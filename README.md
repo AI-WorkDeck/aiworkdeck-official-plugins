@@ -1,3 +1,8 @@
+> **Archived (2026-11-25). This repository is a stale snapshot and is no longer updated.**
+> The official plugins are developed in the main repository: [AI-WorkDeck/aiworkdeck › `official-plugins/`](https://github.com/AI-WorkDeck/aiworkdeck/tree/master/official-plugins). Install them from Plugin Center in the desktop app, or browse them on the [Marketplace](https://workdeck.ai/en/marketplace/plugins).
+>
+> **已归档（2026-11-25）。本仓库是过期快照，不再更新。** 官方插件在主仓库 [AI-WorkDeck/aiworkdeck › `official-plugins/`](https://github.com/AI-WorkDeck/aiworkdeck/tree/master/official-plugins) 中开发；请在桌面端「插件中心」安装，或访问 [插件市场](https://www.aiworkdeck.com/zh/marketplace/plugins)。
+
 # AI WorkDeck Official Plugins (`aiworkdeck-official-plugins`)
 
 [![License: AGPL v3+](https://img.shields.io/badge/License-AGPL%20v3%2B-blue.svg)](./LICENSE)
